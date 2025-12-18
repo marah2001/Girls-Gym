@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena Fit | القوة والجمال</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="dark-theme">
+
+    <nav class="navbar">
+        <div class="logo">ATHENA<span>FIT</span></div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('apparel')" data-key="nav-apparel">الملابس</a></li>
+            <li><a href="#" onclick="showPage('nutrition')" data-key="nav-nutrition">التغذية</a></li>
+            <li><a href="#" onclick="showPage('courses')" data-key="nav-courses">الكورسات</a></li>
+            <li><a href="#" onclick="showPage('events')" data-key="nav-events">الفعاليات</a></li>
+            <li><a href="#" onclick="showPage('community')" data-key="nav-community">المجتمع</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle">🌓</button>
+            <button id="lang-toggle">EN</button>
+            <button class="btn-login" data-key="btn-login">دخول</button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section id="apparel-page" class="page active">
+            <div class="hero-sub">
+                <h1 data-key="apparel-h">مجموعة النحت والأداء</h1>
+                <p data-key="apparel-p">تجاوزي حدودكِ بأناقة مع أحدث صيحات الموضة الرياضية.</p>
+            </div>
+            <div class="grid" id="apparel-grid">
+                </div>
+        </section>
+
+        <section id="nutrition-page" class="page">
+            <div class="hero-sub">
+                <h1 data-key="nutrition-h">الوقود الذكي لجسدكِ</h1>
+            </div>
+            <div class="nutrition-content">
+                <div class="info-card">
+                    <h3 data-key="nut-tip-t">نصيحة اليوم</h3>
+                    <p data-key="nut-tip-p">تناول البروتين بعد التمرين بـ 30 دقيقة يساعد في ترميم العضلات.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses-page" class="page">
+            <div class="hero-sub">
+                <h1 data-key="courses-h">أكاديمية أثينا أونلاين</h1>
+            </div>
+            <div class="courses-grid" id="courses-grid"></div>
+        </section>
+
+        <section id="events-page" class="page">
+            <div class="hero-sub">
+                <h1 data-key="events-h">الجدول الرياضي النسائي</h1>
+            </div>
+            <div class="events-list" id="events-list"></div>
+        </section>
+
+        <section id="community-page" class="page">
+            <div class="hero-sub">
+                <h1 data-key="community-h">ملتقى البطلات</h1>
+            </div>
+            <div class="forum-box">
+                <textarea data-key="forum-placeholder" placeholder="شاركي قصتكِ اليوم..."></textarea>
+                <button class="btn-action" data-key="forum-btn">نشر</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

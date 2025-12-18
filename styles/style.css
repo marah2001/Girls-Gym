@@ -1,0 +1,55 @@
+:root {
+    --primary: #ff2e63; /* فوشيا رياضي */
+    --bg: #0f0f0f;
+    --nav-bg: #1a1a1a;
+    --text: #ffffff;
+    --card: #1e1e1e;
+    --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light-theme {
+    --bg: #f5f5f5;
+    --nav-bg: #ffffff;
+    --text: #1a1a1a;
+    --card: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; background: var(--bg); color: var(--text); transition: var(--transition); line-height: 1.6; }
+
+/* Navbar */
+.navbar {
+    position: fixed; top: 0; width: 100%; height: 75px;
+    background: var(--nav-bg); display: flex; align-items: center;
+    justify-content: space-between; padding: 0 5%; z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.logo { font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; }
+.logo span { color: var(--primary); }
+.nav-links { display: flex; list-style: none; }
+.nav-links li a { text-decoration: none; color: var(--text); margin: 0 15px; font-weight: 600; font-size: 0.9rem; transition: var(--transition); }
+.nav-links li a:hover { color: var(--primary); }
+
+/* SPA System */
+.page { display: none; padding: 120px 8% 50px; animation: slideUp 0.6s ease; }
+.page.active { display: block; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.hero-sub { text-align: center; margin-bottom: 50px; }
+.hero-sub h1 { font-size: 3rem; text-transform: uppercase; color: var(--primary); }
+
+/* Grid System */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: var(--card); border-radius: 20px; overflow: hidden; transition: var(--transition); border: 1px solid rgba(255,46,99,0.1); }
+.card:hover { transform: translateY(-10px); border-color: var(--primary); }
+.card img { width: 100%; height: 300px; object-fit: cover; }
+.card-content { padding: 20px; text-align: center; }
+
+/* Buttons */
+.nav-actions button { background: none; border: 1px solid var(--primary); color: var(--text); padding: 8px 15px; cursor: pointer; border-radius: 8px; margin-left: 10px; }
+.btn-login { background: var(--primary) !important; color: white !important; border: none !important; }
+
+/* Forum Box */
+.forum-box { max-width: 700px; margin: 0 auto; background: var(--card); padding: 30px; border-radius: 20px; }
+.forum-box textarea { width: 100%; height: 150px; background: var(--bg); border: 1px solid var(--primary); border-radius: 10px; color: var(--text); padding: 15px; margin-bottom: 20px; outline: none; }
+.btn-action { background: var(--primary); color: white; border: none; padding: 12px 30px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; }
